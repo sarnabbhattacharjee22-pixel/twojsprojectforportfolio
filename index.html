@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Utility | Password & QR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+    <!-- Terms & Conditions Modal -->
+    <div id="tcModal" class="tc-modal-overlay">
+        <div class="tc-modal-content">
+            <h2>Terms & Conditions</h2>
+            <p>
+                By accessing or using this project, you agree to the following terms: This project is provided strictly for its intended purpose. You agree not to distribute or claim this project under anyone else's or yourown name, nor use it for malicious purposes, misuse, or attempt to break down the code. 
+            </p>
+            <p>
+                While no damage is expected, the user assumes sole responsibility for any consequences arising from the use of this tool. The developer(@sarnab) will not be held liable or responsible for any failures, misuse, or damages.
+            </p>
+            <p class="contact-notice">For inquiries or support, please contact: <strong>helpsainfo@gmail.com</strong></p>
+            <div class="tc-buttons">
+                <button id="declineBtn" class="btn-outline">Decline</button>
+                <button id="acceptBtn" class="btn-primary tc-btn">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dynamic Island Navigation Bar -->
+    <nav class="dynamic-island">
+        <div class="island-content">
+            <span class="island-title">Menu</span>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- WELCOME SECTION -->
+        <section id="welcome" class="welcome-section">
+            <div class="welcome-content">
+                <h1>One Tap & You Got What You Need</h1>
+                <p>Your all in one suite for generating unbreakable passwords and instant QR codes. Fast, secure, and completely free to use. Secure your digital life today.</p>
+                <a href="#home" class="btn-primary1 welcome-btn">Get Started</a>
+            </div>
+        </section>
+        <!-- HOME SECTION -->
+        <section id="home" class="page-section">
+            <div class="tools-wrapper">
+                <!-- Password Generator Section -->
+                <section class="card">
+                    <div class="header">
+                        <span class="icon"><img src="passwordicon.png" alt="Password"></span>
+                        <h2>Generate a Strong Password</h2>
+                        <p>Create a secure password instantly.</p>
+                    </div>
+                    
+                    <div class="input-group password-output-group">
+                        <input type="text" id="passwordResult" value="Kt9#L2qmV8dRp5" readonly>
+                        <button id="copyBtn" class="btn-white"><img src="copyicon.png" alt="Copy">Copy</button>
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Password Length</label>
+                        <input type="range" id="lengthSlider" min="8" max="32" value="16">
+                        <span id="lengthValue">16</span>
+                    </div>
+
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" id="chkUpper" checked> Uppercase Letters</label>
+                        <label><input type="checkbox" id="chkNumbers" checked> Numbers</label>
+                        <label><input type="checkbox" id="chkSymbols" checked> Symbols</label>
+                        <label><input type="checkbox" id="chkLower" checked> Lowercase</label>
+                    </div>
+
+                    <button id="generatePasswordBtn" class="btn-primary">Generate Password</button>
+
+                    <div class="info-box">
+                        <span class="icon-shield"><img src="lockicon.png" alt="Safe"></span>
+                        <p><strong>Stay Safe:</strong> Use strong, unique passwords to protect your accounts.</p>
+                    </div>
+                </section>
+
+                <!-- QR Code Generator Section -->
+                <section class="card">
+                    <div class="header">
+                        <span class="icon"><img src="qricon.png" alt="QR"></span>
+                        <h2>Generate a QR Code for Your Link</h2>
+                        <p>Create a QR code for any URL</p>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="qrInput" placeholder="Enter your URL...">
+                    </div>
+                    
+                    <button id="generateQrBtn" class="btn-primary">Generate QR Code</button>
+
+                    <div class="qr-display">
+                        <img id="qrImage" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Example" alt="QR Code">
+                    </div>
+
+                    <div class="download-group">
+                        <button id="downloadPng" class="btn-outline"><img src="pngicon.png" alt="PNG"> Download PNG</button>
+                        <button id="downloadSvg" class="btn-outline"><img src="svgicon.png" alt="SVG"> Download SVG</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- FEATURES / GALLERY SECTION -->
+        <section id="features" class="page-section content-section">
+            <h2 class="section-title">Features & Output Gallery</h2>
+            <p class="section-subtitle">Click on any image to view it in focus.</p>
+            
+            <div class="gallery-grid">
+                <img src="g2.png" class="gallery-img" data-index="1" alt="Gallery 2">
+                <img src="g3.png" class="gallery-img" data-index="2" alt="Gallery 3">
+                <img src="g1.png" class="gallery-img" data-index="3" alt="Gallery 4">
+                <img src="g1.png" class="gallery-img" data-index="0" alt="Gallery 1">
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="page-section content-section">
+            <h2 class="section-title">About This Utility</h2>
+            <p class="section-text">This project is designed to provide quick, reliable, and secure tools for your daily digital life. From generating unbreakable passwords to creating instant QR codes for your links, we ensure speed and privacy.</p>
+        </section>
+
+       <!-- CONTACT SECTION -->
+        <section id="contact" class="page-section content-section contact-upgrade">
+            <div class="contact-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-text">Have inquiries, feature requests, or need support? Reach out directly to the developer.</p>
+            </div>
+            
+            <div class="contact-card">
+                <div class="developer-profile">
+                    <div class="avatar-placeholder">S</div>
+                    <div class="developer-info">
+                        <h3>Sarnab</h3>
+                        <span class="dev-tag">@sarnab | Developer</span>
+                    </div>
+                </div>
+                
+                <div class="contact-actions">
+                    <div class="email-wrapper">
+                        <img class="emailicon" src="emailicon.png" alt="Email">
+                        <a href="mailto:helpsainfo@gmail.com" class="section-email-link">helpsainfo@gmail.com</a>
+                    </div>
+                    <button id="copyEmailBtn" class="btn-outline contact-copy-btn">Copy Email</button>
+                </div>
+                <h4>Portfolio Link: <a style="text-decoration: none;" href="https://sarnabbhattacharjee.me/" >Click Here</a></h4>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Features -->
+    <footer class="features-footer">
+        <div class="feature-item">
+            <span class="icon"><img src="lockicon.png" alt="Lock"></span>
+            <span>Secure & Reliable</span>
+        </div>
+        <div class="divider"></div>
+        <div class="feature-item">
+            <span class="icon"><img src="fasticon.png" alt="Fast"></span>
+            <span>Quick & Easy</span>
+        </div>
+        <div class="divider"></div>
+        <div class="feature-item">
+            <span class="icon"><img src="freeicon.png" alt="Free"></span>
+            <span>Free to Use</span>
+        </div>
+    </footer>
+
+    <!-- Modal for Gallery -->
+    <div id="lightbox" class="lightbox-overlay">
+        <button id="closeLightbox" class="lightbox-btn close-btn"><img src="closeicon.png"</button>
+        <button id="prevBtn" class="lightbox-btn nav-btn left"><img src="lefticon.png"></button>
+        <img id="lightboxImg" src="" alt="Preview">
+        <button id="nextBtn" class="lightbox-btn nav-btn right"><img src="righticon.png"></button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
